@@ -19,7 +19,7 @@ import {ApiConfigService} from "./app.config";
       clientId: environment.AUTH0_CLIENT_ID,
       authorizationParams: {
         audience: environment.AUTH0_AUDIENCE,
-        redirect_uri: window.location.origin
+        redirect_uri: environment.redirectUri
       },
       httpInterceptor: {
         allowedList: [
