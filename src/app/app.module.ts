@@ -15,8 +15,8 @@ import {ApiConfigService} from "./app.config";
   declarations: [AppComponent],
   imports: [
     AuthModule.forRoot({
-      domain: 'dev-toowwl21qlfjeu6w.eu.auth0.com',
-      clientId: 'U9OMeyZVRGhl9L0uS7A7jwvuDCYW0ca9',
+      domain: environment.AUTH0_DOMAIN,
+      clientId: environment.AUTH0_CLIENT_ID,
       authorizationParams: {
         audience: environment.AUTH0_AUDIENCE,
         redirect_uri: environment.redirectUri
