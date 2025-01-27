@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthHttpInterceptor } from '@auth0/auth0-angular';
-import { environment } from '../environments/environment.prod';
+import { environment } from '../environments/environment.prod'; // change this to ../environments/environment.ts when in development
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +19,7 @@ import {ApiConfigService} from "./app.config";
       clientId: environment.AUTH0_CLIENT_ID,
       authorizationParams: {
         audience: environment.AUTH0_AUDIENCE,
-        redirect_uri: environment.redirectUri
+        redirect_uri: window.location.origin
       },
       httpInterceptor: {
         allowedList: [
